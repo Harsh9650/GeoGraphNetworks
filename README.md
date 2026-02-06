@@ -1,17 +1,161 @@
-GeoGraphNetworks: Shapefile Derived Datasets for Accurate and Scalable Graphical Representations
+# GeoGraphNetworks
 
-GeoGraphNetworks data repository provides a comprehensive collection of networks, including the road and railway networks of the United States of America (USA) and the road and river networks of Great Britain (GB). This dataset offers nationwide coverage for both countries.
+### Shapefile-Derived Datasets for Accurate and Scalable Graph Representations
 
-GeoGraphNetworks data repository is hosted on Figshare (https://figshare.com/articles/dataset/GeoGraphNetworks_Great_Britain_s_Web_of_Roads_Rivers/27284859) and this github repo is used to provide the visual representation of each network.
+GeoGraphNetworks provides a comprehensive collection of large-scale transportation and hydrographic networks derived from official geospatial data. These datasets are prepared as clean, analysis-ready graph structures that support research, modeling, and infrastructure studies.
 
-The networks representing the road infrastructure of the USA include primary and secondary roads, covering all 50 states, 1 federal district (Washington, D.C.), and 5 territories, resulting in a total of 56 networks. 
+The repository includes nationwide networks for:
 
-The rail line infrastructure of the USA is represented as a single network that covers the entire country and includes connectivity to Canada. A total of 114 files , including 57 in Excel (.xlsx) format and 57 in JSON format, representing a total of 56 road networks and 1 rail network.
+* **United States of America (USA)** — roads and railways
+* **Great Britain (GB)** — roads and rivers
 
-Great Britain dataset comprises a comprehensive collection of 106 files, including 53 in Excel (.xlsx) format and 53 in JSON format, representing a total of 53 unique networks, 52 road networks and 1 river network. 
+All datasets are designed to be immediately usable for graph and network analysis.
 
-Each file is named with a unique code assigned by Ordnance Survey, which systematically divides Great Britain into 100 km by 100 km tiles (https://www.ordnancesurvey.co.uk/documents/product-support/user-guide/os-open-roads-overview.pdf).
+---
 
-These graphs will allow researchers, urban planners, and anyone interested to explore how these networks connect people and places. With GeoGraphNetworks, you can easily analyze the travel routes and waterways that play a crucial role in the transportation systems of the GB and the USA.
+## Data Availability
 
-The JSON files contain graph objects created using the widely used Python library NetworkX, allowing for immediate use without the need for pre-processing. Meanwhile, the Excel files are designed to support the construction of these graph networks across various platforms and programming languages, providing users with flexibility and ease of integration into their projects. This ensures that whether you're a developer, researcher, or data analyst, you can leverage this dataset effectively in your work.
+The GeoGraphNetworks data repository is hosted on Figshare:
+
+[https://figshare.com/articles/dataset/GeoGraphNetworks_Great_Britain_s_Web_of_Roads_Rivers/27284859](https://figshare.com/articles/dataset/GeoGraphNetworks_Great_Britain_s_Web_of_Roads_Rivers/27284859)
+
+This GitHub repository provides:
+
+* documentation
+* preprocessing pipeline
+* tools used to generate the datasets
+* visual representations of the networks
+
+---
+
+## Dataset Coverage
+
+### United States
+
+* Primary and secondary road networks
+* Coverage across all 50 states
+* 1 federal district (Washington, D.C.)
+* 5 territories
+* **Total: 56 road networks**
+
+Rail infrastructure:
+
+* Single nationwide railway network
+* Includes cross-border connectivity with Canada
+
+Files:
+
+* 57 Excel (.xlsx)
+* 57 JSON
+* **Total: 114 files**
+
+---
+
+### Great Britain
+
+* Road and river infrastructure
+* Tiled using Ordnance Survey 100 km × 100 km grid
+
+Files:
+
+* 53 Excel (.xlsx)
+* 53 JSON
+* **Total: 106 files**
+* 52 road networks
+* 1 river network
+
+Each file is named using the official Ordnance Survey tile code.
+
+---
+
+## File Formats
+
+### JSON
+
+Contains graph objects built using NetworkX and ready for immediate use in Python workflows.
+
+### Excel
+
+Provides edge lists that can be imported into any environment or language to construct graph networks.
+
+This dual format ensures compatibility across different tools and platforms.
+
+---
+
+## Processing Pipeline
+
+This repository also includes the complete preprocessing pipeline used to generate the graph datasets from raw shapefiles.
+
+The pipeline:
+
+* cleans and deduplicates geometries
+* removes contained or redundant segments
+* detects intersections efficiently using spatial indexing
+* splits lines at intersections
+* computes segment lengths in a projected coordinate system
+* exports clean edge lists for graph construction
+
+The workflow is implemented using:
+
+* GeoPandas
+* Shapely
+* Pandas
+* NumPy
+
+The process is designed to be:
+
+* reproducible
+* scalable to large national datasets
+* computationally efficient
+* topologically consistent
+
+Users can apply the same pipeline to their own shapefiles to generate comparable network datasets.
+
+---
+
+## Intended Use
+
+These networks support:
+
+* graph and network science research
+* routing and pathfinding studies
+* transportation analysis
+* infrastructure planning
+* hydrological modeling
+* large-scale spatial analytics
+
+GeoGraphNetworks enables researchers, planners, and analysts to explore how roads, railways, and waterways connect people and places at regional and national scales.
+
+---
+
+## Requirements
+
+Python 3.9+
+
+Dependencies:
+
+* GeoPandas
+* Shapely
+* Pandas
+* NumPy
+
+A valid coordinate reference system (CRS) must be defined for all input shapefiles to ensure accurate distance calculations.
+
+---
+
+## Reproducibility
+
+All published networks were generated using the preprocessing workflow provided in this repository.
+This ensures that datasets can be regenerated, extended, or customized consistently.
+
+---
+
+## Summary
+
+GeoGraphNetworks combines:
+
+* large-scale geospatial datasets
+* ready-to-use graph formats
+* an efficient and transparent processing pipeline
+
+to provide reliable, scalable, and reproducible network representations of national infrastructure systems.
