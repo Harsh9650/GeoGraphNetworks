@@ -42,7 +42,7 @@ Loads a shapefile and executes the complete preprocessing workflow:
 **Documentation**
 
 * GeoPandas spatial index (`sindex`)
-  [https://geopandas.org/en/stable/docs/user_guide/sindex.html](https://geopandas.org/en/stable/docs/user_guide/sindex.html)
+  [https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoDataFrame.sindex.html](https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoDataFrame.sindex.html)
 * Shapely `within` predicate
   [https://shapely.readthedocs.io/en/stable/manual.html#predicates](https://shapely.readthedocs.io/en/stable/manual.html#predicates)
 
