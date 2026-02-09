@@ -4,6 +4,24 @@ This section documents each function in the preprocessing pipeline and the exter
 
 ---
 
+## Requirements
+
+Python 3.9+
+
+Dependencies:
+
+* GeoPandas
+* Shapely
+* Pandas
+* NumPy
+
+To install dependencies:
+
+`pip install geopandas shapely pandas numpy`
+
+A valid coordinate reference system (CRS) must be defined for all input shapefiles to ensure accurate distance calculations.
+---
+
 ## `data_from_shapefile(shape_file, epsg_value, save_name)`
 
 **Main entry point (run-all pipeline).**
