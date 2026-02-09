@@ -128,21 +128,6 @@ GeoGraphNetworks enables researchers, planners, and analysts to explore how road
 
 ---
 
-## Requirements
-
-Python 3.9+
-
-Dependencies:
-
-* GeoPandas
-* Shapely
-* Pandas
-* NumPy
-
-A valid coordinate reference system (CRS) must be defined for all input shapefiles to ensure accurate distance calculations.
-
----
-
 ## Reproducibility
 
 All published networks were generated using the preprocessing workflow provided in this repository.
