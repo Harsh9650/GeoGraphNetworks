@@ -10,14 +10,16 @@ Python 3.9+
 
 Dependencies:
 
-* GeoPandas
-* Shapely
-* Pandas
-* NumPy
+- GeoPandas
+- Shapely
+- Pandas
+- NumPy
+- NetworkX
+- Matplotlib
 
-To install dependencies:
+Install dependencies:
 
-`pip install geopandas shapely pandas numpy`
+`pip install geopandas shapely pandas numpy networkx matplotlib`
 
 A valid coordinate reference system (CRS) must be defined for all input shapefiles to ensure accurate distance calculations.
 ---
